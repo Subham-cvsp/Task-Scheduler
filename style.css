@@ -1,0 +1,119 @@
+/* Reset some default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(to right, #e0f7fa, #f0f0f0);
+	color: #333;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header styling */
+header {
+	background: #007bff;
+	color: white;
+	text-align: center;
+	padding: 2rem 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Main layout */
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Task form */
+.task-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+.task-form input[type="text"],
+.task-form input[type="date"],
+.task-form select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	flex: 1;
+	font-size: 1rem;
+}
+
+.task-form button {
+	background: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.task-form button:hover {
+	background: #0056b3;
+}
+
+/* Task list container */
+.task-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+/* Individual task */
+.task {
+	background: #f9f9f9;
+	padding: 15px;
+	border-left: 5px solid #007bff;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	position: relative;
+	transition: transform 0.2s ease;
+}
+
+.task:hover {
+	transform: scale(1.01);
+}
+
+.task p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.task button.mark-done {
+	align-self: flex-start;
+	background: #28a745;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.task button.mark-done:hover {
+	background: #218838;
+}
+
+.task.done {
+	opacity: 0.7;
+	background-color: #e0e0e0;
+	border-left-color: #6c757d;
+	text-decoration: line-through;
+}
